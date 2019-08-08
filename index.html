@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="guessnumber.css">
+  <title>guessNumber</title>
+</head>
+
+<body>
+  <div class="container d-flex">
+    <div class="guess-area m-2">
+      <h1 class="text-center mt-5">YOUR GUESS</h1>
+      <input type="text" name="guessnumber" maxlength="4" minlength="4" class="mt-5"></br>
+      <button class="btn btn-primary mt-5"> SUBMIT</button>
+      <h3 class="mt-5">The Answer</h3>
+      <div class="answer answer-output mt-5"></div>
+      <!-- <div class="answer mt-4">1234</div> -->
+    </div>
+    <div class="output-area m-2">
+      <h1 class="mt-5">OUTPUT</h1>
+      <!-- <div class="guess-output">#1. _A_B</div> -->
+    </div>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="guessnumber.js"></script>
+</body>
+
+</html>
