@@ -2,6 +2,7 @@ const input = document.querySelector('input')
 const btn = document.querySelector('button')
 const output = document.querySelector('.output-area')
 const answerArea = document.querySelector('.answer')
+const theAnswer = document.querySelector('.the-answer')
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 let answer = ''
 let countRound = 0
@@ -55,16 +56,16 @@ function playGame() {
   console.log(answer)
   if (countA < 4 && countRound < 10) {
     output.innerHTML += `<div class="output mt-3">#${countRound} your answer: ${input.value} output: ${countA}A${countB}B</div>`
+  } else if (countA === 4) {
+    output.innerHTML += `<div class="output mt-3">Congratulations! the answer is: ${input.value}</div>
+    <div class="game-over output mt-3" >You Win!</div>`
+    theAnswer.innerHTML = 'The Answer'
+    answerArea.innerHTML += `${answer}`
+    btn.removeEventListener('click', playGame)
   } else if (countRound === 10) {
     output.innerHTML += `<div class="output mt-3">#${countRound} your answer: ${input.value} output: ${countA}A${countB}B</div>
     <div class="output mt-3">You need to practice more, Dude!</div>
     <div class="game-over output mt-3" >GAME OVER!</div>`
-    btn.removeEventListener('click', playGame)
-  } else if (countA === 4) {
-    output.innerHTML += `<div class="output mt-3">Congratulations! the answer is: ${input.value}</div>
-    <div class="game-over output mt-3" >You Win!</div>`
-
-    answerArea.innerHTML += `${answer}`
     btn.removeEventListener('click', playGame)
   }
 }
