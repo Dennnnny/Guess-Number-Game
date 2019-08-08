@@ -52,8 +52,8 @@ function playGame() {
     }
   }
   countRound++
-  console.log(countRound)
-  console.log(answer)
+  // console.log(countRound)
+  // console.log(answer)
   if (countA < 4 && countRound < 10) {
     output.innerHTML += `<div class="output mt-3">#${countRound} your answer: ${input.value} output: ${countA}A${countB}B</div>`
   } else if (countA === 4) {
