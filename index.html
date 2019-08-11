@@ -16,10 +16,16 @@
   <div class="container d-flex">
     <div class="guess-area m-2">
       <h1 class="text-center mt-5">YOUR GUESS</h1>
-      <input type="text" name="guessnumber" maxlength="4" minlength="4" class="mt-5"></br>
-      <button class="btn btn-primary mt-5"> SUBMIT</button>
+      <div class="input-area">
+        <input type="text" name="guessnumber" maxlength="4" minlength="4" class="mt-5">
+        <div class="incorrect-input m-1"></div>
+      </div>
+      <button class="btn btn-primary mt-5"> SUBMIT</button><br>
+
+      <h2 class="count-down mt-5 align-middle"></h2>
       <h3 class="the-answer mt-5"></h3>
       <div class="answer answer-output mt-5"></div>
+      <button class="btn btn-secondary mt-3 disable reset">RESET</button>
       <!-- <div class="answer mt-4">1234</div> -->
     </div>
     <div class="output-area m-2">
